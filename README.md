@@ -56,7 +56,13 @@ This approach makes it easy to compare the original code with the changed code, 
 
 ### Which Games Work?
 
-If a game is present in this repository, it can be assumed that it either ran correctly as-is, or has been corrected and any required porting performs, and should be ready-to-run.  At least to the best of my knowledge/testing (which is not exhaustive).
+If a game is present in this repository, it can be assumed that it either ran correctly as-is, or has been corrected and any required porting performed, and should be ready-to-run.  At least to the best of my knowledge/testing (which is not exhaustive).
+
+### Running these Games
+
+The easiest way to run these games is to copy-and-paste the code directly from the GitHub file view into the Serial Terminal interface connected to your "BE6502", while it is running MS-BASIC.  If you've not gone as far as implementing flow-control, and input buffering, in Ben's videos, you'll need to set your "character pacing" in your terminal program to a value that prevents the data coming into the computer too fast.
+
+You could, of course, **type** the code in yourself, but that might be a bit *too* much of a nostalgia trip even for me.
 
 ### Copy vs. Fork
 Why a copy, not a fork?
