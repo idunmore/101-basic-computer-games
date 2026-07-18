@@ -54,6 +54,10 @@ For each game:
 
 This approach makes it easy to compare the original code with the changed code, simply by diffing the two commits.
 
+### Which Games Work?
+
+If a game is present in this repository, it can be assumed that it either ran correctly as-is, or has been corrected and any required porting performs, and should be ready-to-run.  At least to the best of my knowledge/testing (which is not exhaustive).
+
 ### Copy vs. Fork
 Why a copy, not a fork?
 
