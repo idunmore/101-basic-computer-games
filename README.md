@@ -64,6 +64,10 @@ The easiest way to run these games is to copy-and-paste the code directly from t
 
 You could, of course, **type** the code in yourself, but that might be a bit *too* much of a nostalgia trip even for me.
 
+### Learnings
+
+I've added a "[LEARNINGS.md](https://github.com/idunmore/101-basic-computer-games/blob/main/LEARNINGS.md)" file to track new things I've learned about MS-BASIC (in lieu of a specific manual) during the course of porting/converting these games.
+
 ### Copy vs. Fork
 Why a copy, not a fork?
 
