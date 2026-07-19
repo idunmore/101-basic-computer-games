@@ -58,6 +58,17 @@ This approach makes it easy to compare the original code with the changed code, 
 
 If a game is present in this repository, it can be assumed that it either ran correctly as-is, or has been corrected and any required porting performed, and should be ready-to-run.  At least to the best of my knowledge/testing (which is not exhaustive).
 
+See the `gamename.md` file for details on the status of a specific game.
+
+The commit messages also indicate this as:
+
+| Message                  | Meaning                                                                 |
+|--------------------------|-------------------------------------------------------------------------|
+| Add original source file | The original source code runs **as-is**; `gamename.md` will be  present |
+| Ported                   | Code changes were required to run under MS-BASIC                        |
+| Corrected                | Fixes to the OCR/transcription were required                            |
+| Corrected and Ported     | Fixes to the OCR/transcription and code changes were required           |
+
 ### Running these Games
 
 The easiest way to run these games is to copy-and-paste the code directly from the GitHub file view into the Serial Terminal interface connected to your "BE6502", while it is running MS-BASIC.  If you've not gone as far as implementing flow-control, and input buffering, in Ben's videos, you'll need to set your "character pacing" in your terminal program to a value that prevents the data coming into the computer too fast.
