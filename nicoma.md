@@ -1,4 +1,4 @@
-# mathd.bas
+# nicoma.bas
 
 This program required adjustments to the code as part of porting it.
 
