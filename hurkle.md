@@ -10,7 +10,7 @@ Some OCR/transcription errors had already been fixed (and are commented as such 
 
 ## Porting
 
- Two of change were required to the original code:
+ Two of types of change were required to the original code:
 
 - Removing unsupported commands (e.g., "`RANDOMIZE`", line 5, which is neither supported nor necessary).    
   
