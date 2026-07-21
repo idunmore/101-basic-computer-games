@@ -57,3 +57,11 @@ The `ON GOSUB` statement allows for powerful conditional branching.  The `ON` cl
 100 RETURN
 
 ````
+
+### Implicit Array DIMensioning (and ReDIMensioning)
+
+Referencing a variable with subscripts, such as A(1,1), before it has been DIMensioned appears to implicitly create an array.  It can be subsequently resized, also, by assigning to higher subscript values.
+
+This seems to make the **explicit** use of DIM mostly unnecessary.
+
+Also, executing a DIM statements against an *implicity* created array results in a ReDIMensioning error.
