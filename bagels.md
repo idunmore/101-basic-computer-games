@@ -10,8 +10,8 @@ This program required adjustments to the code as part of porting it.
 
 Two significant issues had to be tackled in porting this to MS-BASIC, in addition to minor syntactic changes:
 
-### A BIG Bug
-The first is less a "porting" issue, and more that the original code has a bug in it.  That, or the BASIC interpreter it is intended for (RSTS/E running VAX BASIC and PDP-11 BASIC-PLUS-2) has some *very* weird behavior around arrays.
+### A MAJOR Difference or a BIG Bug
+The first is less a "porting" issue, and more that either the original code has a significant bug in it, or the BASIC interpreter it is intended for (RSTS/E running VAX BASIC and PDP-11 BASIC-PLUS-2) has very different FOR-NEXT behavior than MS-BASIC.
 
 In the original this code is meant to create a 3-digit number with no repeated digits:
 
@@ -26,7 +26,13 @@ In the original this code is meant to create a 3-digit number with no repeated d
 
 But it is written such that it keeps comparing the first generated digit to itself, generating a new digit, and repeating.  Thus it is an infinite loop, and the game "hangs" here.
 
-The following code replaces the above to yield the intended behavior; a three digit number, with each digit stored in an array, with no repeating digits (`PRINT` strings later in the program confirm this is the intended behavior):
+This appears to be down to a difference in how the original BASIC-PLUS-2 and our target version of MS-BASIC handle FOR-NEXT loops.
+
+MS-BASIC appears to **always** run the contents of the loop **at least once** (something common to most of the BASIC implementations I've tried; BBC BASIC, for example, also always run a `FOR-NEXT`  loop at least once), even for a loop where the `TO` criteria is already met.
+
+Whereas BASIC-PLUS-2 has FOR-NEXT loops where that is not necessarily the case.
+
+The following code replaces the above to yield the intended behavior (by skipping the loop iteration if it would already have met the `TO` criteria, per line 165); a three digit number, with each digit stored in an array, with no repeating digits (`PRINT` strings later in the program confirm this is the intended behavior):
 
 ````
 150 FOR I = 1 TO 3
