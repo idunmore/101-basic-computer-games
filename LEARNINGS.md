@@ -1,3 +1,4 @@
+
 ## Learnings
 
 I can find no specific "manual" or "reference" to the version of MS-BASIC this project targets.  While many BASIC constructs are common across dialects, features, keywords and syntax can vary.
@@ -60,8 +61,28 @@ The `ON GOSUB` statement allows for powerful conditional branching.  The `ON` cl
 
 ### Implicit Array DIMensioning (and ReDIMensioning)
 
-Referencing a variable with subscripts, such as A(1,1), before it has been DIMensioned appears to implicitly create an array.  It can be subsequently resized, also, by assigning to higher subscript values.
+Referencing a variable with subscripts, such as A(1,1), before it has been `DIM`ensioned appears to implicitly create an array.  It can be subsequently resized, also, by assigning to higher subscript values.
 
-This seems to make the **explicit** use of DIM mostly unnecessary.
+This seems to make the **explicit** use of `DIM` *mostly* unnecessary.
 
-Also, executing a DIM statements against an *implicity* created array results in a ReDIMensioning error.
+Implicitly dimensioned arrays (i.e., arrays referenced as such without being explicitly `DIM`ensioned **are limited to 10 elements per dimension** (so you can reference A(10,10) without `DIM`ensioning `A`, but `A(11,10)` would yield an error.
+
+Also, executing a `DIM` statement against an *implicity* created array results in a ReDIMensioning error.
+
+### FOR-NEXT Always Executes at Least Once
+
+FOR-NEXT loops in MS-BASIC **always** execute **at least once**, even if the `TO` criteria have been satisfied before the **first** loop iteration:
+
+````
+10 FOR A = 1 TO 1
+20 PRINT A
+30 NEXT A
+````
+
+Will print:
+
+`1`
+
+Most of the BASIC dialects I've tested this with behave the same way, although some (such as RSTS/E running VAX BASIC and PDP-11 BASIC-PLUS-2) either don't, or have variations of `FOR-NEXT` that make the run-at-least-once behavior conditional.
+
+This in contrast to languages like `C` where the `for` look only runs if the exit criteria are **not** met.
