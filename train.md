@@ -20,7 +20,7 @@ Which yields a syntax error, due to the extra parenthesis.
 
 ## Porting
 
-Basic changes were necessary to make  `gomoko`  run:
+Basic changes were necessary to make  `train`  run:
 
 The  `RANDOMIZE`  call was removed as it is neither supported nor necessary. Also, the calls to  `RND`  were replaced with  `RND(1)`  as that is the MS-BASIC equivalent.
 
