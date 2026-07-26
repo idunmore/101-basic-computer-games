@@ -110,3 +110,9 @@ has the same effect as:
 
 Note that the `NEXT` is not required (nor supported) in the first, statement-modifying, case.
 
+### Early FOR/NEXT Exit - "Control Stack" Clean-Up
+
+Industrial versions of BASIC, such as BASIC-PLUS, support automatically cleaning up their "control stack" when code branches out of a `FOR/NEXT` loop without meeting to `TO` condition.
+
+Most "home computer" dialects of BASIC, including the original 6502 versions of MS-BASIC, do not handle this, and exitinga `FOR/NEXT` loop early, by `GOTO`ing out of it, will result in the "control stack" becoming "corrupt", and will yield *"NEXT without FOR"* errors the next time a `NEXT` statement is processed.
+
