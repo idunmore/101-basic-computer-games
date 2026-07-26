@@ -86,3 +86,27 @@ Will print:
 Most of the BASIC dialects I've tested this with behave the same way, although some (such as RSTS/E running VAX BASIC and PDP-11 BASIC-PLUS-2) either don't, or have variations of `FOR-NEXT` that make the run-at-least-once behavior conditional.
 
 This in contrast to languages like `C` where the `for` look only runs if the exit criteria are **not** met.
+
+
+## Non-MS-BASIC Learnings Useful in Porting TO MS-BASIC
+
+While porting a number of these programs I've not only solified my understanding of what is, and isn't, supported by MS-BASIC, but also learned a fair bit about interesting behaviors, keywords, commands and so on for the BASIC dialects that the *original* programs are written for.
+
+These dialects include Dartmouth BASIC and DEC VAX/VMS, RSX-11M-PLUS, RSX11M, and RSTS/E running VAX BASIC and PDP-11 BASIC-PLUS-2 ... among others.
+
+### FOR-TO As a STATEMENT Modifier
+
+In DEC BASIC you can use `FOR-TO` statements to modifier another statement:
+
+````
+10 A$(I) = "X" FOR I = 1 TO 10
+````
+
+has the same effect as:
+
+````
+10 FOR I = 1 TO 10: A$(I) = "X": NEXT I
+````
+
+Note that the `NEXT` is not required (nor supported) in the first, statement-modifying, case.
+
