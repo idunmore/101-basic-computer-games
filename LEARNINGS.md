@@ -87,6 +87,21 @@ Most of the BASIC dialects I've tested this with behave the same way, although s
 
 This in contrast to languages like `C` where the `for` look only runs if the exit criteria are **not** met.
 
+### PRINT can be abbreviated as ? (on entry ONLY)
+
+MS-BASIC will let you enter `?` instead of the word `PRINT` when entering code.  However, it will expand it to the word `PRINT` when you hit enter on that line of code.
+
+If you type:
+
+````
+10 ? "Hello, world!"
+````
+
+and then `LIST` the program, you'll get:
+
+````
+10 PRINT "Hello, world!"
+````
 
 ## Non-MS-BASIC Learnings Useful in Porting TO MS-BASIC
 
