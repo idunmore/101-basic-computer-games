@@ -2,6 +2,10 @@
 
 This program required corrections to the OCR/transcriptions.
 
+# war.bas
+
+This program required **both** corrections from the OCR/transcriptions, and adjustments to the code as part of porting it.
+
 ## OCR/Transcription Corrections
 
 Corrected an error where transcription read an `=` in line 110 that should be `-`; a benign issue since it is just in a `PRINT` statement.
@@ -47,3 +51,4 @@ The optimized (in the committed file) uses a "[Fisher-Yates shuffle](https://en.
 ````
 
  And "no" I didn't just "know" this, I had to do a little research on alternate algorithms.
+ 
