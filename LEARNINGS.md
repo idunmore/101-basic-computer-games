@@ -103,6 +103,18 @@ and then `LIST` the program, you'll get:
 10 PRINT "Hello, world!"
 ````
 
+### RND() can be Seeded
+
+MS-BASIC does not support the `RANDOMIZE` or `RANDOM` keywords which, in many BASIC dialects can take an *optional* seed value so its possible to get a reproducible run of psuedo-random numbers.
+
+However, if you use a **negative** number and call `RND()` with it, that number **is** used as a seed for generating random values.
+
+So:
+
+- `RND(0)` appears to always give the same result for a given `RUN` of a program, but can change between runs.
+- `RND(1)` yields a random number between 0 and 0.999999.
+- `RND(-n)` sees the random number generator with `n` (where `n` is a negative integer).
+
 ## Non-MS-BASIC Learnings Useful in Porting TO MS-BASIC
 
 While porting a number of these programs I've not only solified my understanding of what is, and isn't, supported by MS-BASIC, but also learned a fair bit about interesting behaviors, keywords, commands and so on for the BASIC dialects that the *original* programs are written for.
