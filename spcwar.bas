@@ -430,8 +430,8 @@
 4770 PRINT "   ----- ----- ----- ----- ----- ----- ----- -----"
 4780 FOR I=1 TO 8
 4790 PRINT I;
-4791 J=1
-4792 PRINT "   ";:V=Z(I,J):GOSUB 7000
+4791 J=1:PRINT " ";
+4792 V=Z(I,J):GOSUB 7000:PRINT "   ";
 4793 J=J+1
 4794 IF J<=8 THEN 4792
 4795 PRINT
