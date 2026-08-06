@@ -5,21 +5,26 @@ The galaxy is an 8 by 8 quadrant grid. Each quadrant is divided
 into an 8 by 8 sector grid.
 
 ### Symbols
-  <*>  Enterprise
-  +++  Klingon
-  \>!<  Starbase
-   \*   Star
+| Symbol | Meaning      |
+| :---:  |--------------|
+|   <*>  | Enterprise   |
+|   +++  | Klingon      |
+|  \>!<  | Starbase     |
+|   \*   | Star         |
 
 ### Commands
-  0  Set course and warp factor
-  1  Short-range sensor scan
-  2  Long-range sensor scan
-  3  Fire phasers
-  4  Fire photon torpedoes
-  5  Transfer energy to shields
-  6  Damage-control report
-  7  Library computer
-  8  End the game
+
+| Number | Commmand                  |
+| :---:  |---------------------------| 
+|   0    |Set course and warp factor |
+|   1    |Short-range sensor scan    |
+|   2    |Long-range sensor scan     |
+|   3    |Fire phasers               |
+|   4    |Fire photon torpedoes      |
+|   5    |Transfer energy to shields |
+|   6    |Damage-control report      |
+|   7    |Library computer           |
+|   8    |End the game               |
 
 ### Course Directions
 
@@ -46,5 +51,5 @@ This is sometimes known as "**KBS**"; Klingons, Bases, Stars.
 The library computer provides three commands as follows:
 
 - **0** - Galactic record
--  **1** - Status report
--  **2** - Photon-torpedo trajectory calculations
+- **1** - Status report
+- **2** - Photon-torpedo trajectory calculations
