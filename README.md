@@ -1,5 +1,9 @@
 ## 101 BASIC Computer Games
 
+[![Static Badge](https://img.shields.io/badge/MS--BASIC-v1.1_(6_digit_FP)-orange)](https://github.com/microsoft/BASIC-M6502)&nbsp;
+[![Static Badge](https://img.shields.io/badge/architecture-Ben_Eater_6502-blue)](https://eater.net/6502)&nbsp;
+[![Static Badge](https://img.shields.io/badge/MS--BASIC_build-IMDLabs-purple)](https://github.com/idunmore/msbasic)
+
 Or perhaps a better title would be:
 
 **"101 BASIC Computer Games for the Ben Eater 6502 running MS-BASIC"**
